@@ -49,16 +49,6 @@ O projeto foi desenvolvido seguindo boas práticas de desenvolvimento Android mo
 
 ---
 
-# 📱 Screenshots
-
-> Adicione imagens do aplicativo aqui.
-
-| Home | Busca | Time |
-|------|--------|------|
-| imagem | imagem | imagem |
-
----
-
 # Tecnologias
 
 ## Android
