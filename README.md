@@ -83,7 +83,7 @@ O projeto foi desenvolvido seguindo boas práticas de desenvolvimento Android mo
 
 Responsável pelos dados dos Pokémon.
 
-https://pokeapi.com/
+https://pokeapi.co/
 
 Operações implementadas:
 
