@@ -76,9 +76,9 @@ fun CreateTeamScreen(
 
         bottomBar = {
             Surface(
-                tonalElevation = 8.dp
+                tonalElevation = 8.dp,
+                modifier = Modifier.navigationBarsPadding()
             ) {
-
                 Button(
                     onClick = teamViewModel::saveTeam,
                     enabled = !formState.isSaving,

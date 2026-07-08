@@ -33,17 +33,26 @@ class HomeViewModel @Inject constructor(
 
     fun loadHomeData() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true)
-
             userPreferencesRepository.userPreferences.collect { prefs ->
                 _uiState.value = _uiState.value.copy(trainerName = prefs.trainerName)
             }
         }
+        refreshTeams()
+    }
+
+    fun refreshTeams() {
         viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true)
             when (val result = teamRepository.getAllTeams()) {
-                is NetworkResult.Success -> _uiState.value =
-                    _uiState.value.copy(teamCount = result.data.size, isLoading = false)
-                is NetworkResult.Error -> _uiState.value = _uiState.value.copy(isLoading = false)
+                is NetworkResult.Success -> {
+                    _uiState.value = _uiState.value.copy(
+                        teamCount = result.data.size,
+                        isLoading = false
+                    )
+                }
+                is NetworkResult.Error -> {
+                    _uiState.value = _uiState.value.copy(isLoading = false)
+                }
                 is NetworkResult.Loading -> Unit
             }
         }
