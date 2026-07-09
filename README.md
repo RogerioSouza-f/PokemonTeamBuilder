@@ -130,6 +130,7 @@ Operações implementadas:
 
 # Desenvolvedores:
 
+
 > Rogerio Pires de Freitas Souza
 
 
@@ -138,7 +139,8 @@ Operações implementadas:
 
 GitHub:
 > https://github.com/RogerioSouza-f
-> 
+
+
 > https://github.com/LucasCruzOliveira
 
 ---
